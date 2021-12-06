@@ -1,0 +1,27 @@
+================================================================
+venv\Scripts\Activate
+
+venv\Scripts\Deactivate
+
+.\venv\scripts\activate
+
+python manage.py shell  - Запуск интерактивоной оболочки в виртуальном окружении
+-----------------------------------------------------------------
+pip install beautifulsoup4
+pip install requests fake-useragent
+-----------------------------------------------------------------
+Включение политики безопасности запуска скриптов PowerShell:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+*****************************************************************
+
+git commit -am "Установка DEBUG = FALSE on environment variables"
+git push heroku master
+
+git add .   -  приказывает Git начать 
+               отслеживание измененийgit новых файлов, добавленных в проекта
+
+*****************************************************************
+
+pip freeze > requirements.txt
+*****************************************************************
