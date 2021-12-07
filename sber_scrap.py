@@ -20,10 +20,8 @@ FULL_URL = 'https://www.sberbank.ru/proxy/services/rates/public/history?rateType
 
 
 def get_html(full_url, label_redirects=1):
-    result = {
-        'html':'',
-        'status':0
-    }
+    result = {'html':'', 'status':0}
+
     if label_redirects == 1:
         allow_redirects = True
     else:
