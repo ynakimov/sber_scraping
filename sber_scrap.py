@@ -9,6 +9,8 @@ import json
 import datetime
 import requests
 from fake_useragent import UserAgent
+from plotly.graph_objs import Bar, Layout
+from plotly import offline
 
 
 HEADERS_SBER_BANK = {
@@ -71,7 +73,7 @@ def average_per_day(dict_of_rates):
     return average   
 
 
-def get_data_for_period():
+def get_data_to_dictionary_for_period(rateType, isoCodes):
     """ Возвращает данные сайта за период с 21-06-2021 по текущую дату """
     price_by_date = []
     current_date = datetime.datetime(2021,6,21)
@@ -83,17 +85,15 @@ def get_data_for_period():
         if weekday < 5:
             millisecond = int(current_date.timestamp() * 1000)
             millisecond = str(millisecond)             
-            getted_result  = get_request(CLIENT_LAVEL, METALL_COD, millisecond)
+            getted_result  = get_request(rateType, isoCodes, millisecond)
             data = get_data(getted_result)
             if data['status'] == 200:
                 date_dict = {}
-                date_dict['tdate'] = current_date.date()
-                date_dict['date'] = str(date_dict['tdate'])
-                date_dict['millisecond'] = millisecond                
+                date_dict['date'] = current_date.date()
                 
                 # data = get_data(getted_result)
                 metal_exchange_rates = data['json']
-                dict_of_rates = metal_exchange_rates['historyRates'][millisecond][CLIENT_LAVEL][METALL_COD]
+                dict_of_rates = metal_exchange_rates['historyRates'][millisecond][rateType][isoCodes]
                 date_dict['price'] = average_per_day(dict_of_rates)
                 price_by_date.append(date_dict)
                 
@@ -105,29 +105,31 @@ def get_data_for_period():
 
     return price_by_date
 
-price_by_date = get_data_for_period()
-
 
 def save_as_csv(price_by_date, filename):
     with open(filename, 'x', newline='') as csvfile:
         # writer = csv.writer(f, dialect='excel')
-        fieldnames = ['tdate', 'date', 'millisecond', 'price']
+        fieldnames = ['date', 'price']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames, dialect='excel')
         writer.writeheader()
         for item in price_by_date:
             writer.writerow(item)
 
 
-getted_result  = get_request('ERNP-6', 'USD', 1638997200000)
-data = get_data(getted_result)
+price_by_date = get_data_to_dictionary_for_period('ERNP-6', 'USD')
+filename = 'price_by_date.csv'
+save_as_csv(price_by_date, filename)
 
-exchange_rates = data['json']
-# filename = 'price_by_date.csv'
+# getted_result  = get_request('ERNP-6', 'USD', 1638997200000)
+# data = get_data(getted_result)
+
+# exchange_rates = data['json']
+
 # millisecond = str(DATA_MILLISECUND)
 # dict_of_rates = exchange_rates['historyRates'][millisecond][CLIENT_LAVEL][METALL_COD]
 
 # print(average_per_day(dict_of_rates, millisecond))
-file_path = 'readable_USD_20211209.json'
-save_as_readable_json(exchange_rates, file_path)
+# file_path = 'readable_USD_20211209.json'
+# save_as_readable_json(exchange_rates, file_path)
 
 d = 2
