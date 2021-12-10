@@ -1,5 +1,5 @@
 """
-Скраппинг курсов драгоценных металлог сайта sberbank.ru
+Скраппинг курсов драгоценных металлов на сайте sberbank.ru
 """
 
 # from urllib.parse import urlparse
@@ -10,7 +10,13 @@ import datetime
 import requests
 from fake_useragent import UserAgent
 from plotly.graph_objs import Bar, Layout
+
 from plotly import offline
+import plotly.graph_objs as go
+import plotly.express as px
+from plotly.subplots import make_subplots
+
+import pandas as pd
 
 
 HEADERS_SBER_BANK = {
@@ -73,9 +79,17 @@ def average_per_day(dict_of_rates):
     return average   
 
 
-def get_data_to_dictionary_for_period(rateType, isoCodes):
-    """ Возвращает данные сайта за период с 21-06-2021 по текущую дату """
-    price_by_date = []
+def get_data_to_dictionary_for_period(rateType, isoCodes, structure='for_csv'):
+    """ Возвращает данные сайта за период с 21-06-2021 по текущую дату.
+        В зависимости от structure возвращает либо список словарей (когда structure ='for_csv') 
+        либо словарь списков"""
+    if structure =='for_csv':
+        price_by_date = []
+    else:
+        price_by_date = {}
+        dates = []
+        prices = []
+
     current_date = datetime.datetime(2021,6,21)
     timedelta = datetime.timedelta(1)
     today     = datetime.date.today()
@@ -88,21 +102,29 @@ def get_data_to_dictionary_for_period(rateType, isoCodes):
             getted_result  = get_request(rateType, isoCodes, millisecond)
             data = get_data(getted_result)
             if data['status'] == 200:
-                date_dict = {}
-                date_dict['date'] = current_date.date()
-                
                 # data = get_data(getted_result)
                 metal_exchange_rates = data['json']
                 dict_of_rates = metal_exchange_rates['historyRates'][millisecond][rateType][isoCodes]
-                date_dict['price'] = average_per_day(dict_of_rates)
-                price_by_date.append(date_dict)
+                price = average_per_day(dict_of_rates)
+                if structure == 'for_csv':
+                    date_dict = {}
+                    date_dict['date'] = current_date.date()                
+                    date_dict['price'] = price
+                    price_by_date.append(date_dict)
+                else:
+                    dates.append(current_date.date())
+                    prices.append(price)                           
                 
             else:
                 print(f'Ошибка получения данных сайта за {data} ')      
             # print(f'millisecond = {millisecond}')
             print(current_date.date())                        
         current_date = current_date + timedelta
-
+    
+    if structure != 'for_csv':
+        price_by_date['dates'] = dates
+        price_by_date['prices'] = prices
+            
     return price_by_date
 
 
@@ -116,9 +138,16 @@ def save_as_csv(price_by_date, filename):
             writer.writerow(item)
 
 
-price_by_date = get_data_to_dictionary_for_period('ERNP-6', 'USD')
-filename = 'price_by_date.csv'
-save_as_csv(price_by_date, filename)
+price_USD = get_data_to_dictionary_for_period('ERNP-6', 'USD', structure='for_plotly')
+price_gold = get_data_to_dictionary_for_period('PMR-4', 'A98', structure='for_plotly')
+
+fig = go.Figure()
+# fig.add_trace(go.Scatter(x=price_USD['dates'], y=price_USD['prices']))
+fig.add_trace(go.Scatter(x=price_gold['dates'], y=price_gold['prices']))
+fig.show()
+
+# filename = 'price_by_date.csv'
+# save_as_csv(price_by_date, filename)
 
 # getted_result  = get_request('ERNP-6', 'USD', 1638997200000)
 # data = get_data(getted_result)
@@ -131,5 +160,6 @@ save_as_csv(price_by_date, filename)
 # print(average_per_day(dict_of_rates, millisecond))
 # file_path = 'readable_USD_20211209.json'
 # save_as_readable_json(exchange_rates, file_path)
+
 
 d = 2
