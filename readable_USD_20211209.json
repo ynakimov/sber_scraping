@@ -1,0 +1,724 @@
+{
+    "oldDate": 1623272400000,
+    "historyRates": {
+        "1638997200000": {
+            "ERNP-6": {
+                "USD": {
+                    "1639011600000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.02,
+                                "rateBuy": 72.99
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.99,
+                                "rateBuy": 73.02
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.96,
+                                "rateBuy": 73.05
+                            }
+                        ]
+                    },
+                    "1639022609000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.94,
+                                "rateBuy": 73.11
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.92,
+                                "rateBuy": 73.13
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.89,
+                                "rateBuy": 73.16
+                            }
+                        ]
+                    },
+                    "1639026972000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.89,
+                                "rateBuy": 73.06
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.87,
+                                "rateBuy": 73.09
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.84,
+                                "rateBuy": 73.12
+                            }
+                        ]
+                    },
+                    "1639029221000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.96,
+                                "rateBuy": 73.13
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.94,
+                                "rateBuy": 73.15
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.91,
+                                "rateBuy": 73.18
+                            }
+                        ]
+                    },
+                    "1639030599000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.99,
+                                "rateBuy": 73.21
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.97,
+                                "rateBuy": 73.24
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.94,
+                                "rateBuy": 73.27
+                            }
+                        ]
+                    },
+                    "1639033032000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.91,
+                                "rateBuy": 73.13
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.88,
+                                "rateBuy": 73.15
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.85,
+                                "rateBuy": 73.18
+                            }
+                        ]
+                    },
+                    "1639033191000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.97,
+                                "rateBuy": 73.19
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.94,
+                                "rateBuy": 73.21
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.91,
+                                "rateBuy": 73.24
+                            }
+                        ]
+                    },
+                    "1639036094000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.96,
+                                "rateBuy": 73.18
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.93,
+                                "rateBuy": 73.2
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.9,
+                                "rateBuy": 73.23
+                            }
+                        ]
+                    },
+                    "1639036936000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.0,
+                                "rateBuy": 73.22
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.98,
+                                "rateBuy": 73.25
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.95,
+                                "rateBuy": 73.28
+                            }
+                        ]
+                    },
+                    "1639039664000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.07,
+                                "rateBuy": 73.29
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.04,
+                                "rateBuy": 73.31
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 74.01,
+                                "rateBuy": 73.34
+                            }
+                        ]
+                    },
+                    "1639046469000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.06,
+                                "rateBuy": 73.28
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.04,
+                                "rateBuy": 73.31
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 74.01,
+                                "rateBuy": 73.34
+                            }
+                        ]
+                    },
+                    "1639049863000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.08,
+                                "rateBuy": 73.3
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.05,
+                                "rateBuy": 73.32
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 74.02,
+                                "rateBuy": 73.35
+                            }
+                        ]
+                    },
+                    "1639051519000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.07,
+                                "rateBuy": 73.29
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.05,
+                                "rateBuy": 73.32
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 74.02,
+                                "rateBuy": 73.35
+                            }
+                        ]
+                    },
+                    "1639053284000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.02,
+                                "rateBuy": 73.24
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.0,
+                                "rateBuy": 73.27
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.97,
+                                "rateBuy": 73.3
+                            }
+                        ]
+                    },
+                    "1639055250000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.07,
+                                "rateBuy": 73.3
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.05,
+                                "rateBuy": 73.32
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 74.02,
+                                "rateBuy": 73.35
+                            }
+                        ]
+                    },
+                    "1639055486000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.02,
+                                "rateBuy": 73.24
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.0,
+                                "rateBuy": 73.27
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.97,
+                                "rateBuy": 73.3
+                            }
+                        ]
+                    },
+                    "1639056230000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.05,
+                                "rateBuy": 73.27
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.02,
+                                "rateBuy": 73.29
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.99,
+                                "rateBuy": 73.32
+                            }
+                        ]
+                    },
+                    "1639058142000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.03,
+                                "rateBuy": 73.25
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.0,
+                                "rateBuy": 73.27
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.97,
+                                "rateBuy": 73.3
+                            }
+                        ]
+                    },
+                    "1639059612000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.97,
+                                "rateBuy": 73.19
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.94,
+                                "rateBuy": 73.21
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.91,
+                                "rateBuy": 73.24
+                            }
+                        ]
+                    },
+                    "1639059848000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.01,
+                                "rateBuy": 73.23
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.99,
+                                "rateBuy": 73.26
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.96,
+                                "rateBuy": 73.29
+                            }
+                        ]
+                    },
+                    "1639060116000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.93,
+                                "rateBuy": 73.15
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.9,
+                                "rateBuy": 73.18
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.87,
+                                "rateBuy": 73.21
+                            }
+                        ]
+                    },
+                    "1639062172000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.9,
+                                "rateBuy": 73.12
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.87,
+                                "rateBuy": 73.15
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.84,
+                                "rateBuy": 73.18
+                            }
+                        ]
+                    },
+                    "1639063787000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.97,
+                                "rateBuy": 73.19
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.94,
+                                "rateBuy": 73.21
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.91,
+                                "rateBuy": 73.24
+                            }
+                        ]
+                    },
+                    "1639064933000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.96,
+                                "rateBuy": 73.18
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.93,
+                                "rateBuy": 73.2
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.9,
+                                "rateBuy": 73.23
+                            }
+                        ]
+                    },
+                    "1639065686000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 73.99,
+                                "rateBuy": 73.2
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.96,
+                                "rateBuy": 73.22
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.93,
+                                "rateBuy": 73.25
+                            }
+                        ]
+                    },
+                    "1639066383000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.02,
+                                "rateBuy": 73.23
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 73.99,
+                                "rateBuy": 73.25
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 73.96,
+                                "rateBuy": 73.28
+                            }
+                        ]
+                    },
+                    "1639067196000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.08,
+                                "rateBuy": 73.29
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.06,
+                                "rateBuy": 73.32
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 74.03,
+                                "rateBuy": 73.35
+                            }
+                        ]
+                    },
+                    "1639070017000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.1,
+                                "rateBuy": 73.31
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.08,
+                                "rateBuy": 73.34
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 74.05,
+                                "rateBuy": 73.37
+                            }
+                        ]
+                    },
+                    "1639072155000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.14,
+                                "rateBuy": 73.35
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.11,
+                                "rateBuy": 73.37
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 74.08,
+                                "rateBuy": 73.4
+                            }
+                        ]
+                    },
+                    "1639073417000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.12,
+                                "rateBuy": 73.33
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.09,
+                                "rateBuy": 73.35
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 74.06,
+                                "rateBuy": 73.38
+                            }
+                        ]
+                    },
+                    "1639080000000": {
+                        "lotSize": 1.0,
+                        "rangeList": [
+                            {
+                                "rangeAmountBottom": 0.0,
+                                "rangeAmountUpper": 2999.99,
+                                "rateSell": 74.61,
+                                "rateBuy": 72.43
+                            },
+                            {
+                                "rangeAmountBottom": 3000.0,
+                                "rangeAmountUpper": 49999.99,
+                                "rateSell": 74.57,
+                                "rateBuy": 72.47
+                            },
+                            {
+                                "rangeAmountBottom": 50000.0,
+                                "rangeAmountUpper": 9999999999.99,
+                                "rateSell": 74.49,
+                                "rateBuy": 72.55
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
