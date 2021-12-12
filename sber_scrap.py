@@ -132,7 +132,7 @@ def get_data_to_dictionary_for_period(begin_date, rateType, isoCodes, structure=
 def save_as_csv(price_by_date, filename):
     with open(filename, 'x', newline='') as csvfile:
         # writer = csv.writer(f, dialect='excel')
-        fieldnames = ['date', 'price']
+        fieldnames = ['date', 'price of sell', 'price of buy']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames, dialect='excel')
         writer.writeheader()
         for item in price_by_date:

@@ -1,12 +1,13 @@
 import database as db
 import sber_scrap as sber
 
+
 def sql_bulk_insert_without_check(data):
     records = []
     len_price = len(data['dates'])
     i = 0
     while (i < len_price):
-        # Готовим список кортежей для массовой вставки
+        # Готовим список кортежей для массовой вставки записей в БД.
         records.append((data['dates'][i], data['prices_sell'][i], data['prices_buy'][i]))
         i += 1  
     db.sql_bulk_insert_without_check(db.get_connection(), records)
@@ -20,7 +21,6 @@ def main():
     price_data = db.get_all_data(db.get_connection())
     sber.show_diagram(price_data)
     
-
 
 
 if __name__ == '__main__':

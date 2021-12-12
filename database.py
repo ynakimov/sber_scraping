@@ -20,7 +20,7 @@ def create_table(connection):
         date DATE NOT NULL primary key,
         price_sell REAL,
         price_buy REAL
-);"""
+    );"""
     connection.execute(query)
     connection.commit()
 
