@@ -55,7 +55,7 @@ def get_request(rateType, isoCodes, millisecond):
 
 
 def average_per_day(dict_of_rates):
-    """ Средняя цена продажи за день"""
+    """ Средние цены продажи/покупки за день"""
     summaSell = 0
     summaBuy = 0  
     count = 0
@@ -141,8 +141,8 @@ def save_as_csv(price_by_date, filename):
 
 def show_diagram(price_data):
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=price_data['dates'], y=price_data['prices_sell']))
-    fig.add_trace(go.Scatter(x=price_data['dates'], y=price_data['prices_buy']))
+    fig.add_trace(go.Scatter(x=price_data['dates'], y=price_data['prices_sell'], name='prices of sell'))
+    fig.add_trace(go.Scatter(x=price_data['dates'], y=price_data['prices_buy'], name='prices of buy'))
     fig.show()
 
 

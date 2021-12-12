@@ -67,10 +67,11 @@ def sql_bulk_insert_without_check(connection, entities):
 def get_maximum_date(connection):
     """ Получает  макисмальную дату из таблицы """
     cursor = connection.cursor()
-    query = 'SELECT MAX(P.date) AS date FROM price_gold AS P;'
+    # query = 'SELECT MAX(P.date) AS date FROM price_gold AS P;'
     # Почему-то происходит преобразование типа datetime.date() в тип str() если в запросе применять MAX() 
-    # query = 'SELECT P.date AS date FROM price_gold AS P ORDER BY date DESC'    
+    query = 'SELECT P.date AS date FROM price_gold AS P ORDER BY date DESC'    
     # data = cursor.execute(query)
+    cursor.execute(query)
     row = cursor.fetchone()
     
     if row == None:
