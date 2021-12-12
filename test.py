@@ -3,6 +3,14 @@ import time
 
 # td = datetime.datetime.today()
 # print(f"td{td}")
+FULL_URL = 'https://www.sberbank.ru/proxy/services/rates/public/history?rateType=PMR-4&isoCodes[]=A98&date=1638219600000&regionId=038'
+FULL_URL     = 'https://www.sberbank.ru/proxy/services/rates/public/history?rateType=PMR-4&isoCodes[]=A98&date=1638910800000&regionId=038'
+URL_CURRENCY = 'https://www.sberbank.ru/proxy/services/rates/public/history?rateType=ERNP-6&isoCodes[]=USD&date=1638997200000&regionId=038'
+CLIENT_LAVEL ='PMR-4'
+METALL_COD = 'A98' # Металл 98 - золото, 99 - серебро
+DATA_MILLISECUND = 1638910800000
+DATA_MILLISECUND = 1638997200000 # 9 декабря 2021
+
 
 timestamp = 1638219600
 
