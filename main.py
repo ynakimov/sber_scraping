@@ -19,7 +19,7 @@ def main():
     sql_bulk_insert_without_check(price_gold)
     price_data = db.get_all_data(db.get_connection())
     sber.show_diagram(price_data)
-    a = 2
+    
 
 
 

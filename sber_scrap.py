@@ -141,8 +141,12 @@ def save_as_csv(price_by_date, filename):
 
 def show_diagram(price_data):
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=price_data['dates'], y=price_data['prices_sell'], name='prices of sell'))
-    fig.add_trace(go.Scatter(x=price_data['dates'], y=price_data['prices_buy'], name='prices of buy'))
+    mode='lines+markers'
+    fig.add_trace(go.Scatter(x=price_data['dates'], y=price_data['prices_sell'], mode=mode, name='prices of sell'))
+    fig.add_trace(go.Scatter(x=price_data['dates'], y=price_data['prices_buy'], mode=mode, name='prices of buy'))
+    fig.update_yaxes(title='Цена, руб.')
+    fig.update_layout(title="Цены покупки/продажи ОМС (золото) на сайте Сбербанка")
+    fig.update_traces(hoverinfo="all", hovertemplate="Дата: %{x}<br>Цена: %{y}")
     fig.show()
 
 
