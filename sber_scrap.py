@@ -73,7 +73,7 @@ def average_per_day(dict_of_rates):
     return {'price_sell': averageSell, 'price_buy': averageBuy}   
 
 
-def get_data_to_dictionary_for_period(begin_date, rateType, isoCodes, structure='for_csv'):
+def get_data_to_dictionary_for_period_old(begin_date, rateType, isoCodes, structure='for_csv'):
     """ Возвращает данные сайта за период с current_date (самая ранняя 21-06-2021) и по текущую дату.
         В зависимости от structure возвращает либо список словарей (когда structure ='for_csv') 
         либо словарь списков """
@@ -127,6 +127,77 @@ def get_data_to_dictionary_for_period(begin_date, rateType, isoCodes, structure=
         price_by_date['prices_buy'] = prices_buy
             
     return price_by_date
+
+
+def get_data_to_dictionary_for_period(begin_date, rateType, isoCodes, structure='for_csv'):
+    """ Возвращает данные сайта за период с current_date (самая ранняя 21-06-2021) и по текущую дату.
+        В зависимости от structure возвращает либо список словарей (когда structure ='for_csv') 
+        либо словарь списков """
+
+    if structure =='for_csv':
+        price_by_date = []
+    else:
+        dates = []
+        prices_sell = []
+        prices_buy = []          
+        price_by_date = {'dates': dates, 'prices_sell': prices_sell, 'prices_buy': prices_buy}        
+
+    # current_date = datetime.datetime(2021, 6, 21)
+    current_date = datetime.datetime(begin_date.year, begin_date.month, begin_date.day)
+    timedelta = datetime.timedelta(1)
+        
+    today     = datetime.date.today()
+    end_date  = datetime.datetime(today.year, today.month, today.day)
+    while current_date <= end_date:
+        weekday = current_date.weekday()
+        if weekday < 5:           
+            data_for_day = get_data_to_dictionary_for_day(current_date, rateType, isoCodes)
+            
+            if len(data_for_day) > 0:
+
+                if structure == 'for_csv':
+                    date_dict = {}
+                    date_dict['date'] = data_for_day['date']               
+                    date_dict['price_sell'] = data_for_day['price_sell']
+                    date_dict['price_buy'] = data_for_day['price_buy']
+                    price_by_date.append(date_dict)
+                else:
+                    dates.append(data_for_day['date'] )
+                    prices_sell.append(data_for_day['price_sell'])
+                    prices_buy.append(data_for_day['price_buy'])
+
+            print(current_date.date())                        
+        current_date = current_date + timedelta
+    
+    if structure != 'for_csv':
+        price_by_date['dates'] = dates
+        price_by_date['prices_sell'] = prices_sell
+        price_by_date['prices_buy'] = prices_buy
+            
+    return price_by_date
+
+
+def get_data_to_dictionary_for_day(day, rateType, isoCodes):
+    """ Возвращает данные сайта за дату 'day'. """
+    result = {}
+    current_date = datetime.datetime(day.year, day.month, day.day)
+    millisecond = str(int(current_date.timestamp() * 1000))
+    
+    getted_result  = get_request(rateType, isoCodes, millisecond)
+    data = get_data(getted_result)
+   
+    if data['status'] == 200:        
+        exchange_rates = data['json']
+        dict_of_rates = exchange_rates['historyRates'][millisecond][rateType][isoCodes]
+        price = average_per_day(dict_of_rates)
+        result['date'] = current_date.date()                
+        result['price_sell'] = price['price_sell']
+        result['price_buy']  = price['price_buy']
+    else:
+        print(f'Ошибка получения данных сайта за {day} ')      
+    print(day)       
+    return result
+
 
 
 def save_as_csv(price_by_date, filename):
