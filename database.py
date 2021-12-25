@@ -51,6 +51,22 @@ def sql_insert_without_check(connection, entities):
     connection.close()
 
 
+def sql_update(connection, entities):
+    """" Обновляет запись в строке таблицы.
+        Где entities - кортеж  (price_sell, price_buy, date). """
+    cursor = connection.cursor()
+    query = """
+            UPDATE price_gold
+                SET price_sell = ?,
+                    price_buy = ?
+            WHERE
+                date = ?;"""
+
+    cursor.execute(query, entities)
+    connection.commit()
+    connection.close()
+
+
 def sql_bulk_insert_without_check(connection, entities):
     """ Вставляет большой набор данных """
 
@@ -77,8 +93,14 @@ def get_maximum_date(connection):
     if row == None:
         result = datetime.date(2021, 6, 21)
     else:
-        result = row[0] + datetime.timedelta(1) #  дельту добавим к дате последних полученных данных                 
+        result = row[0]
     connection.close()
+    return result
+
+
+def add_day(date, count):
+    """ Добавляет к дате указанное число дней """
+    result = date + datetime.timedelta(count)                    
     return result
 
 
