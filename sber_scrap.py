@@ -9,14 +9,14 @@ import json
 import datetime
 import requests
 from fake_useragent import UserAgent
-from plotly.graph_objs import Bar, Layout
+# from plotly.graph_objs import Bar, Layout
 
-from plotly import offline
+# from plotly import offline
 import plotly.graph_objs as go
-import plotly.express as px
-from plotly.subplots import make_subplots
+# import plotly.express as px
+# from plotly.subplots import make_subplots
 
-import pandas as pd
+# import pandas as pd
 import database as db
 
 
@@ -59,74 +59,16 @@ def average_per_day(dict_of_rates):
     summaSell = 0
     summaBuy = 0  
     count = 0
-    for key, val in dict_of_rates.items():
-        # print(key)
+    for val in dict_of_rates.values():
         count += 1
         for v in val["rangeList"]:
             if v["rangeAmountBottom"] == 0:
                 summaSell += v['rateSell'] 
                 summaBuy += v['rateBuy']
-                # print(v)
 
     averageSell = int(summaSell/count)
     averageBuy = int(summaBuy/count)
     return {'price_sell': averageSell, 'price_buy': averageBuy}   
-
-
-def get_data_to_dictionary_for_period_old(begin_date, rateType, isoCodes, structure='for_csv'):
-    """ Возвращает данные сайта за период с current_date (самая ранняя 21-06-2021) и по текущую дату.
-        В зависимости от structure возвращает либо список словарей (когда structure ='for_csv') 
-        либо словарь списков """
-
-    if structure =='for_csv':
-        price_by_date = []
-    else:
-        dates = []
-        prices_sell = []
-        prices_buy = []          
-        price_by_date = {'dates': dates, 'prices_sell': prices_sell, 'prices_buy': prices_buy}        
-
-    # current_date = datetime.datetime(2021, 6, 21)
-    current_date = datetime.datetime(begin_date.year, begin_date.month, begin_date.day)
-    timedelta = datetime.timedelta(1)
-        
-    today     = datetime.date.today()
-    end_date  = datetime.datetime(today.year, today.month, today.day)
-    while current_date <= end_date:
-        weekday = current_date.weekday()
-        if weekday < 5:
-            millisecond = int(current_date.timestamp() * 1000)
-            millisecond = str(millisecond)             
-            getted_result  = get_request(rateType, isoCodes, millisecond)
-            data = get_data(getted_result)
-            if data['status'] == 200:
-                # data = get_data(getted_result)
-                metal_exchange_rates = data['json']
-                dict_of_rates = metal_exchange_rates['historyRates'][millisecond][rateType][isoCodes]
-                price = average_per_day(dict_of_rates)
-                if structure == 'for_csv':
-                    date_dict = {}
-                    date_dict['date'] = current_date.date()                
-                    date_dict['price_sell'] = price['price_sell']
-                    date_dict['price_buy'] = price['price_buy']
-                    price_by_date.append(date_dict)
-                else:
-                    dates.append(current_date.date())
-                    prices_sell.append(price['price_sell'])
-                    prices_buy.append(price['price_buy'])
-
-            else:
-                print(f'Ошибка получения данных сайта за {data} ')      
-            # print(f'millisecond = {millisecond}')
-            print(current_date.date())                        
-        current_date = current_date + timedelta
-    
-    if structure != 'for_csv':
-        price_by_date['dates'] = dates
-        price_by_date['prices_sell'] = prices_sell
-        price_by_date['prices_buy'] = prices_buy
-            
-    return price_by_date
 
 
 def get_data_to_dictionary_for_period(begin_date, rateType, isoCodes, structure='for_csv'):
@@ -188,14 +130,19 @@ def get_data_to_dictionary_for_day(day, rateType, isoCodes):
    
     if data['status'] == 200:        
         exchange_rates = data['json']
-        dict_of_rates = exchange_rates['historyRates'][millisecond][rateType][isoCodes]
+        try:
+            dict_of_rates = exchange_rates['historyRates'][millisecond][rateType][isoCodes]
+        except:
+            print(f'Ошибка получения данных сайта за {day}')
+            return result
+
         price = average_per_day(dict_of_rates)
         result['date'] = current_date.date()                
         result['price_sell'] = price['price_sell']
         result['price_buy']  = price['price_buy']
     else:
         print(f'Ошибка получения данных сайта за {day} ')      
-    print(day)       
+    # print(day)       
     return result
 
 
